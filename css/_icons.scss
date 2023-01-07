@@ -1,0 +1,87 @@
+
+@font-face {
+    font-family: "awesome-brands";
+    src: url("../fonts/FontAwesome6Brands-Regular-400.otf");
+}
+
+@font-face {
+    font-family: "awesome-solid";
+    src: url("../fonts/FontAwesome6Free-Solid-900.otf");
+}
+    
+@font-face {
+    font-family: "awesome-regular";
+    src: url("../fonts/FontAwesome6Free-Regular-400.otf");
+}
+    
+.instagram-logo:before {
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 32px;
+    font-weight: normal;
+    content: "\f16d";
+}
+
+.facebook-logo:before {
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 18px;
+    content: "\f39e";
+}
+
+.twitter-logo:before {
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 18px;
+    content: "\f099";
+}
+
+.discord-logo:before {
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 24px;
+    content: "\f392";
+}
+
+.linkedin-logo::before{
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 32px;
+    content: "\f08c";
+
+}
+
+.linked-in-logo::before{
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 20px;
+    padding: 3px;
+    content: "\f0e1";
+    border-radius: 5px;
+    color: white;
+    border: 2px solid white;
+}
+
+
+
+.github-logo::before{
+    font-family: awesome-brands;
+    font-style: normal;
+    font-size: 28px;
+    content: "\f09b";
+
+}
+
+.icon-carret-up::before{
+    font-family: awesome-solid;
+    font-style: normal;
+    font-size: 32px;
+    content: "\f0d8";
+}
+
+.icon-chevron-down::before{
+    font-family: awesome-solid;
+    font-style: normal;
+    font-size: 32px;
+    content: "\f078";
+}

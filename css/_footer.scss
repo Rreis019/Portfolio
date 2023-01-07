@@ -1,0 +1,156 @@
+@import "./icons";
+
+h1{font-size: 64px}
+h2{font-size: 48px;}
+h3{font-size: 40px;}
+h4{font-size: 32px;}
+h5{font-size: 24px;}
+h6{font-size: 20px;}
+
+footer[type="4"]
+{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #F2F2F2;
+    
+    gap: 32px;
+    padding-block: 37px;
+
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    z-index: 3;
+    
+}
+
+
+footer[type="4"] .footer-left-side
+{
+    display: flex;
+    width: 75%;
+    justify-content: space-between;
+
+}
+
+footer[type="4"] .separator{
+    width: 3px;
+    align-self:stretch;
+    background: #DDDDDD;
+}
+
+footer[type="4"] .links a:visited,footer[type="4"] .links a{
+    color: black;
+}
+
+footer[type="4"] .links
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 16px;
+}
+
+footer[type="4"] .links a:hover{
+    cursor: pointer;
+    color: $secondaryColor;
+}
+
+footer[type="4"] .links h1{
+    font-size: 26px;
+    font-weight: 500;
+    font-family: 'Outfit', sans-serif;
+}
+footer[type="4"] h4,h6{font-weight: 500;}
+footer[type="4"] h4{font-weight: 600;}
+footer[type="4"] .links a{font-size: 18px;}
+
+
+.grid-accounts
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+
+    i{
+        cursor: pointer;
+        &:hover{
+            color: $secondaryColor;
+        }
+    }
+}
+
+
+footer[type="4"] img
+{
+    max-width: 180px;
+    border-radius: 50%;
+}
+
+footer[type="4"] .profile{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+@media screen and (max-width:900px)
+{
+    footer[type="4"]{
+        flex-direction: column-reverse;
+    }
+
+    footer[type="4"] .footer-left-side{
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+    }
+
+    footer[type="4"] .links h1{
+        width: 100%;
+    }
+
+    footer[type="4"] .separator{
+        width: 80%;
+        height: 3px;
+        margin: 0 auto;
+    }
+
+    footer[type="4"] .links {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .grid-accounts{
+        display: flex;
+        align-items: center;
+    }
+    .accounts{flex-direction: column;}
+}
+
+
+.subfooter
+{
+    padding-block: 20px;
+    background-color: #212121;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.btn-backtop{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    cursor: pointer;
+
+    &:hover{
+        color: $secondaryColor;
+        
+    }
+}

@@ -1,0 +1,30 @@
+$primaryColor :#212121;
+$secondaryColor : #FE8900;
+$thirdColor : white;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap');
+
+.page-padding {
+    padding-inline: clamp(10px, 11.5%,200px);
+    @media screen and (max-width:750px) {
+        padding-inline: 10px;
+    }
+}
+
+*,html,body{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+    
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
