@@ -43,16 +43,36 @@
         <a href="#works">Work</a>
 
         <div id="btn-languanges-hamburger">
-          <button class="btn-lang-primary lang-pt">PT</button>
-          <button class="btn-lang-secondary lang-en">EN</button>
+          <button languanges="pt" class="btn-lang-primary lang-pt">PT</button>
+          <button languanges="en" class="btn-lang-secondary lang-en">EN</button>
+        </div>
+
+
+        <div>
+          <div class="icons" style="display: flex;flex-direction: row;gap: 16px;">
+            <a
+              target="_blank"
+              href="https://github.com/Rreis019"
+              class="icon github-logo"
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.instagram.com/rt_blurr112/"
+              class="icon instagram-logo"
+            ></a>
+            <a
+              target="_blank"
+              href="https://www.linkedin.com/in/rodrigo-reis-85680a248/"
+              class="icon linkedin-logo"
+            ></a>
+          </div>
         </div>
 
       </hamburger-menu>
 
-
       <div id="btn-languanges">
-        <button class="btn-lang-primary lang-pt">PT</button>
-        <button class="btn-lang-secondary lang-en">EN</button>
+        <button languanges="pt" class="btn-lang-primary lang-pt">PT</button>
+        <button languanges="en" class="btn-lang-secondary lang-en">EN</button>
       </div>
     </div>
 
@@ -173,10 +193,12 @@
           <img src="img/profile-picture-aboutme.png" />
         </div>
         <div class="hero-text">
-          <p>Hi, my name is Rodrigo and I am a Portuguese programmer.</p> <br/>
-          <p>I have a strong foundation in programming, starting with Scratch in my youth and later learning languages such as Python, C++, and web languanges.</p> <br/>
-          <p>I have further developed my skills through professional programming courses/College and personal projects.</p><br/> 
-          <p>I have previous work experience at Fefal and am currently <strong>seeking new opportunities.</strong></p>
+          <p>
+            Hi, my name is Rodrigo and I am a Portuguese programmer.<br/><br/>
+            I have a strong foundation in programming, starting with Scratch in my youth and later learning languages such as Python, C++, and web languanges.<br/><br/>
+            I have further developed my skills through professional programming courses/College and personal projects.<br/> <br/>
+            I have previous work experience at Fefal and am currently <strong>seeking new opportunities.</strong>
+          </p>
         </div>
         <h4> "Success is the sum of small efforts, repeated day in and day out." </h4>
         <div class="buttons">
@@ -185,27 +207,25 @@
       </div>
     </section>
 
-    <section style="" id="contact-me" class="contact" type="1">
+    <section id="contact-me" class="contact" type="1">
       <h1 class="contact-title">Contact me</h1>
-      <form class="contact-form">
+      <form class="contact-form"   action="https://formspree.io/f/xdovoybp" method="POST">
         <div class="group">
           <div class="input" type="4">
-            <input required />
-            <span>Name</span>
+            <input name="name" required />
+            <span  id="contact-name">Name</span>
           </div>
           <div class="input" type="4">
-            <input required />
-            <span>Email</span>
+            <input name="email" required />
+            <span  id="contact-email">Email</span>
           </div>
         </div>
         <div class="input" type="4">
-          <input required />
-          <span>Subject</span>
+          <input name="subject" required />
+          <span  id="contact-subject">Subject</span>
         </div>
         <textarea class="message" style="resize: none" placeholder="Message" ></textarea>
-        <button class="btn-primary btn-primary-3 submit" type="button">
-          Send
-        </button>
+        <button id="send-button" class="btn-primary btn-primary-3 submit" type="submit">Send</button>
       </form>
     </section>
 
@@ -259,6 +279,7 @@
 
 <script src="js/hamburger-menu.js"></script>
 <script src="js/lang.js"></script>
+
 <script>
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {

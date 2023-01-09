@@ -1,0 +1,118 @@
+[
+    {
+        "selector": ".hero-content h1",
+        "text": "Olá, meu nome é Rodrigo"
+    },
+    {
+        "selector": ".hero-content h2",
+        "text": "Desenvolvedor Front-end & Back-end"
+    },
+    {
+        "selector": ".hero-content a",
+        "text": "Contacto"
+    },
+    {
+        "selector": ".more p",
+        "text": "mais"
+    },
+    {
+        "selector": "#navbar-links a:nth-child(1)",
+        "text": "Sobre"
+    },
+    {
+        "selector": "#navbar-links a:nth-child(2)",
+        "text": "Habilidades"
+    },
+    {
+        "selector": "#navbar-links a:nth-child(3)",
+        "text": "Trabalhos"
+    },
+    {
+        "selector": "hamburger-menu .all-links a:nth-child(1)",
+        "text": "Sobre"
+    },
+    {
+        "selector": "hamburger-menu .all-links a:nth-child(2)",
+        "text": "Habilidades"
+    },
+    {
+        "selector": "hamburger-menu .all-links a:nth-child(3)",
+        "text": "Trabalhos"
+    },
+    {
+        "selector": "#works h1",
+        "text": "Trabalhos<span>&Projetos de aprendizado</span>"
+    },
+    {
+        "selector": "#skills h2",
+        "text": "Habilidades em"
+    },
+    {
+        "selector": "#about .title",
+        "text": "Sobre min"
+    },
+    {
+        "selector": ".hero-text p",
+        "text": "\n Olá, meu nome é Rodrigo e sou um programador português.<br><br>\n Tenho uma base sólida em programação, começando com o Scratch na minha juventude e mais tarde aprendendo linguagens como Python, C++ e linguagens da web.<br><br>\n Desenvolvi mais minhas habilidades através de cursos profissionais de programação/faculdade e projetos pessoais.<br> <br>\n Tenho experiência de trabalho anterior na Fefal e atualmente <strong>estou procurando novas oportunidades.</strong>"
+    },
+    {
+        "selector": "#about .buttons button",
+        "text": "Contacto"
+    },
+    {
+        "selector": ".hero-content h4",
+        "text": " \"O sucesso é a soma de pequenos esforços, repetidos dia após dia.\" "
+    },
+    {
+        "selector": "#contact-me .contact-title",
+        "text": "Entre em contato comigo"
+    },
+    {
+        "selector": ".contact-form #contact-name",
+        "text": "Nome"
+    },
+    {
+        "selector": ".contact-form #contact-email",
+        "text": "Email"
+    },
+    {
+        "selector": ".contact-form #contact-subject",
+        "text": "Assuntos"
+    },
+    {
+        "selector": ".footer-left-side div:nth-child(1) h1",
+        "text": "Links"
+    },
+    {
+        "selector": ".footer-left-side div:nth-child(1) a:nth-child(2)",
+        "text": "Trabalhos"
+    },
+    {
+        "selector": ".footer-left-side div:nth-child(1) a:nth-child(3)",
+        "text": "Habilidades"
+    },
+    {
+        "selector": ".footer-left-side div:nth-child(1) a:nth-child(4)",
+        "text": "Sobre"
+    },
+    {
+        "selector": ".links.accounts h1",
+        "text": "Contas"
+    },
+    {
+        "selector": ".footer-left-side div:nth-child(3) h1",
+        "text": "Extras"
+    },
+    {
+        "selector": "#contact-me #send-button",
+        "text": "Enviar"
+    },
+    {
+        "selector": "#contact-me #send-button",
+        "text": "Enviar"
+    },
+    {
+        "selector": ".btn-backtop h4",
+        "text": "Voltar para o topo"
+    }
+]

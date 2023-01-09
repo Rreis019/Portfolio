@@ -1,29 +1,44 @@
-var buttonsPt = document.querySelectorAll(".lang-pt");
-var buttonsEng = document.querySelectorAll(".lang-en");
-
-//json com selector e o texto
-
-function changeToPt(){
-    for (let index = 0; index < buttonsPt.length; index++) {
-        buttonsPt[index].classList.replace("btn-lang-primary","btn-lang-secondary");
-    }
-
-    for (let index = 0; index < buttonsEng.length; index++) {
-        buttonsEng[index].classList.replace("btn-lang-secondary","btn-lang-primary");
-    }
-
-}
-
-function changeToEng()
+function updatePageFromJSON(jsonFileName)
 {
-    for (let index = 0; index < buttonsPt.length; index++) {
-        buttonsPt[index].classList.replace("btn-lang-secondary","btn-lang-primary");
-    }
-
-    for (let index = 0; index < buttonsEng.length; index++) {
-        buttonsEng[index].classList.replace("btn-lang-primary","btn-lang-secondary");
-    }
+    // Abre o arquivo JSON pelo nome
+    fetch(jsonFileName)
+      .then(response => {
+        // Verifica se o arquivo existe
+        if (response.ok) {
+          return response.json();
+        } else {
+          throw new Error(`O arquivo ${jsonFileName} não pôde ser encontrado.`);
+        }
+      })
+      .then(jsonData => {
+        // Da loop em cada elemento do array do JSON
+        jsonData.forEach(element => {
+          // Faz a atualização no elemento HTML correspondente
+          document.querySelector(element.selector).innerHTML = element.text;
+        });
+      })
+      .catch(error => {
+        console.error(error);
+      });
 }
 
-for (let index = 0; index < buttonsPt.length; index++) {buttonsPt[index].addEventListener("click",changeToPt);}
-for (let index = 0; index < buttonsPt.length; index++) {buttonsEng[index].addEventListener("click",changeToEng);}
+var btnLangs = document.querySelectorAll("[languanges]");
+
+for (let index = 0; index < btnLangs.length; index++) {
+    btnLangs[index].addEventListener("click", function() 
+    {
+        var currentLanguange = this.getAttribute("languanges");
+        document.documentElement.setAttribute("lang", currentLanguange);
+        
+        for (let index = 0; index < btnLangs.length; index++) {
+            const element = btnLangs[index];
+            
+            if(element.getAttribute("languanges") == currentLanguange){
+                element.classList.replace("btn-lang-primary","btn-lang-secondary");
+            }else{
+                element.classList.replace("btn-lang-secondary","btn-lang-primary");
+            }
+        }
+        updatePageFromJSON("js/langs/" + currentLanguange + ".json");
+    });
+}
