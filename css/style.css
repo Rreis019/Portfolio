@@ -1449,4 +1449,130 @@ h2 {
   .hero-3 .buttons * {
     width: 100%;
   }
+}
+/*-------------*/
+.toast-1 {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-block: 30px;
+  padding-left: 15px;
+  padding-right: 35px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  max-width: 500px;
+  width: 100vw;
+  max-height: 125px;
+  border-radius: 25px;
+  z-index: 99999;
+  background-color: white;
+  color: black;
+  text-align: left;
+  transform: scale(0.8);
+}
+
+.toast-1-right, .toast-1-left {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.toast-1 .border-left {
+  height: 75px;
+  width: 7px;
+  border-radius: 5px;
+  background: #21A679;
+}
+
+.toast-1 p {
+  color: #B8B8B8;
+  font-size: 20px;
+  text-align: left;
+}
+
+.toast-1 .icon-close {
+  cursor: pointer;
+}
+
+.toast-1 .icon-close::before {
+  content: "\f00d";
+  font-family: awesome-solid;
+  font-style: normal;
+  font-size: 20px;
+  color: #A8A8A8;
+}
+
+.toast-1 .toast-1-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-inline: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toast-1 .toast-1-icon .logo::before {
+  font-family: awesome-solid;
+  font-style: normal;
+  font-size: 20px;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .toast-1 {
+    padding-inline: 15px;
+    width: 100vw;
+  }
+  .toast-1 .toast-1-icon {
+    margin-inline: 10px;
+  }
+  .toast-1 .toast-1-icon {
+    width: 25px;
+    height: 25px;
+  }
+  .toast-1 .toast-1-icon .logo::before {
+    font-size: 14px;
+  }
+  .toast-1 p {
+    font-size: 16px;
+  }
+  .toast-1 h6 {
+    font-size: 18px;
+  }
+}
+.toast-1-sucess .border-left {
+  background: #21A679;
+}
+
+.toast-1-sucess .toast-1-icon {
+  background: #21A679;
+}
+
+.toast-1-sucess .toast-1-icon .logo::before {
+  content: "\f00c";
+}
+
+.toast-1-warning .border-left {
+  background: #EFA92D;
+}
+
+.toast-1-warning .toast-1-icon {
+  background: #EFA92D;
+}
+
+.toast-1-warning .toast-1-icon .logo::before {
+  content: "!";
+}
+
+.toast-1-info .border-left {
+  background: #007BC3;
+}
+
+.toast-1-info .toast-1-icon {
+  background: #007BC3;
+}
+
+.toast-1-info .toast-1-icon .logo::before {
+  content: "\f129";
 }/*# sourceMappingURL=style.css.map */

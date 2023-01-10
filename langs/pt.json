@@ -56,7 +56,7 @@
         "text": "\n Olá, meu nome é Rodrigo e sou um programador português.<br><br>\n Tenho uma base sólida em programação, começando com o Scratch na minha juventude e mais tarde aprendendo linguagens como Python, C++ e linguagens da web.<br><br>\n Desenvolvi mais minhas habilidades através de cursos profissionais de programação/faculdade e projetos pessoais.<br> <br>\n Tenho experiência de trabalho anterior na Fefal e atualmente <strong>estou procurando novas oportunidades.</strong>"
     },
     {
-        "selector": "#about .buttons button",
+        "selector": "#about .buttons a",
         "text": "Contacto"
     },
     {
@@ -114,5 +114,21 @@
     {
         "selector": ".btn-backtop h4",
         "text": "Voltar para o topo"
+    },
+    {
+        "selector": "ui-toast#toastSucess h6",
+        "text": "Sucesso"
+    },
+    {
+        "selector": "ui-toast#toastSucess p",
+        "text": "Formulario submetido"
+    },
+    {
+        "selector": "ui-toast#toastFail h6",
+        "text": "Erro"
+    },
+    {
+        "selector": "ui-toast#toastFail p",
+        "text": "Falhou submeter o formulario"
     }
 ]

@@ -13,6 +13,7 @@ function updatePageFromJSON(jsonFileName)
       .then(jsonData => {
         // Da loop em cada elemento do array do JSON
         jsonData.forEach(element => {
+          console.log(element);
           // Faz a atualização no elemento HTML correspondente
           document.querySelector(element.selector).innerHTML = element.text;
         });
@@ -29,7 +30,7 @@ for (let index = 0; index < btnLangs.length; index++) {
     {
         var currentLanguange = this.getAttribute("languanges");
         document.documentElement.setAttribute("lang", currentLanguange);
-        
+
         for (let index = 0; index < btnLangs.length; index++) {
             const element = btnLangs[index];
             
@@ -39,6 +40,6 @@ for (let index = 0; index < btnLangs.length; index++) {
                 element.classList.replace("btn-lang-secondary","btn-lang-primary");
             }
         }
-        updatePageFromJSON("js/langs/" + currentLanguange + ".json");
+        updatePageFromJSON("langs/" + currentLanguange + ".json");
     });
 }

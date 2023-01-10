@@ -202,14 +202,14 @@
         </div>
         <h4> "Success is the sum of small efforts, repeated day in and day out." </h4>
         <div class="buttons">
-          <button class="btn-secondary" type="4">Contact</button>
+          <a  href="#contact-me"  class="btn-secondary" type="4">Contact</a>
         </div>
       </div>
     </section>
 
     <section id="contact-me" class="contact" type="1">
       <h1 class="contact-title">Contact me</h1>
-      <form class="contact-form"   action="https://formspree.io/f/xdovoybp" method="POST">
+      <form class="contact-form"  onsubmit="return false" action="https://formspree.io/f/xdovoybp" method="POST">
         <div class="group">
           <div class="input" type="4">
             <input name="name" required />
@@ -224,8 +224,11 @@
           <input name="subject" required />
           <span  id="contact-subject">Subject</span>
         </div>
-        <textarea class="message" style="resize: none" placeholder="Message" ></textarea>
-        <button id="send-button" class="btn-primary btn-primary-3 submit" type="submit">Send</button>
+        <textarea class="message"  name="message" style="resize: none" placeholder="Message" ></textarea>
+        <button onclick="sendContactForm()" id="send-button" class="btn-primary btn-primary-3 submit" type="submit">Send</button>
+        
+        <ui-toast style="display: none;" id="toastFail" title="Error" message="Failed to submit the form" type="warning"></ui-toast>
+        <ui-toast style="display: none;" id="toastSucess" title="Sucess" message="Form submitted" type="sucess"></ui-toast>
       </form>
     </section>
 
@@ -279,8 +282,49 @@
 
 <script src="js/hamburger-menu.js"></script>
 <script src="js/lang.js"></script>
-
+<script src="js/toast.js"></script>
 <script>
+
+  function sendContactForm()
+  {
+    var form = {
+      "this_" : document.querySelector(".contact-form"),
+      "name": document.querySelector(".contact-form [name='name']"),
+      "email": document.querySelector(".contact-form [name='email']"),
+      "subject": document.querySelector(".contact-form [name='subject']"),
+      "message": document.querySelector(".contact-form [name='message']")
+    }
+
+    if(!form.this_.checkValidity()){
+      return;
+    }
+
+    var formData = new FormData();
+    formData.append("name", form.name.value);
+    formData.append("email", form.email.value);
+    formData.append("subject", form.subject.value);
+    formData.append("message", form.message.value);
+
+
+    fetch("https://formspree.io/f/xdovoybp", {
+        method: form.this_.method,
+        body: formData,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          showToast("toastSucess");
+          form.this_.reset();
+        } else {
+          showToast("toastFail");
+        }
+      }).catch(error => {
+        console.log("dwawd");
+        showToast("toastFail");
+      });
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener("click", function (e) {
       e.preventDefault();

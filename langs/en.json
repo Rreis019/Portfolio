@@ -56,7 +56,7 @@
         "text": "\n            Hi, my name is Rodrigo and I am a Portuguese programmer.<br><br>\n            I have a strong foundation in programming, starting with Scratch in my youth and later learning languages such as Python, C++, and web languanges.<br><br>\n            I have further developed my skills through professional programming courses/College and personal projects.<br> <br>\n            I have previous work experience at Fefal and am currently <strong>seeking new opportunities.</strong>\n          "
     },
     {
-        "selector": "#about .buttons button",
+        "selector": "#about .buttons a",
         "text": "Contact"
     },
     {
@@ -110,5 +110,21 @@
     {
         "selector": ".btn-backtop h4",
         "text": "BACK TO TOP"
+    },
+    {
+        "selector": "ui-toast#toastSucess h6",
+        "text": "Sucess"
+    },
+    {
+        "selector": "ui-toast#toastSucess p",
+        "text": "Form submitted"
+    },
+    {
+        "selector": "ui-toast#toastFail h6",
+        "text": "Error"
+    },
+    {
+        "selector": "ui-toast#toastFail p",
+        "text": "Failed to submit the form"
     }
 ]
