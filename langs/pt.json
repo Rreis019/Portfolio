@@ -53,7 +53,7 @@
     },
     {
         "selector": ".hero-text p",
-        "text": "\n Olá, meu nome é Rodrigo e sou um programador português.<br><br>\n Tenho uma base sólida em programação, começando com o Scratch na minha juventude e mais tarde aprendendo linguagens como Python, C++ e linguagens da web.<br><br>\n Desenvolvi mais minhas habilidades através de cursos profissionais de programação/faculdade e projetos pessoais.<br> <br>\n Tenho experiência de trabalho anterior na Fefal e atualmente <strong>estou procurando novas oportunidades.</strong>"
+        "text": "\n Olá, meu nome é Rodrigo e sou um programador português.<br><br>\n Tenho uma base sólida em programação, começando com o Scratch na minha juventude e mais tarde aprendendo linguagens como Python, C++ e linguagens da web.<br><br>\n Desenvolvi as minhas habilidades através de cursos profissionais de programação/faculdade e projetos pessoais.<br> <br>\n Tenho experiência de trabalho anterior na Fefal e atualmente <strong>estou procurando novas oportunidades.</strong>"
     },
     {
         "selector": "#about .buttons a",

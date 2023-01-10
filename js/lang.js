@@ -13,13 +13,13 @@ function updatePageFromJSON(jsonFileName)
       .then(jsonData => {
         // Da loop em cada elemento do array do JSON
         jsonData.forEach(element => {
-          console.log(element);
+          //console.log(element);
           // Faz a atualização no elemento HTML correspondente
           document.querySelector(element.selector).innerHTML = element.text;
         });
       })
       .catch(error => {
-        console.error(error);
+        //console.error(error);
       });
 }
 
