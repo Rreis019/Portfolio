@@ -9,6 +9,9 @@
     <title>Rodrigo Reis | PortFolio</title>
   </head>
   <body>
+    <script>setTimeout(() => {document.getElementById("preloader").style.opacity = 1;}, 50);</script>
+    <div id="preloader"></div>
+
     <section id="home" class="hero-1 page-padding">
       <div class="hero-content">
         <h1>Hello my name is Rodrigo</h1>
@@ -333,6 +336,12 @@
         behavior: "smooth",
       });
     });
+  });
+
+
+  var loader = document.getElementById("preloader");
+  window.addEventListener("load",function(){
+    loader.style.display = "none";
   });
 </script>
 

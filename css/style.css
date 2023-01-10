@@ -356,6 +356,18 @@ body {
   overflow-x: hidden;
 }
 
+#preloader {
+  background: rgb(23, 23, 23) url(../img/eye.gif) no-repeat center center;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 999999;
+  opacity: 0;
+  transition: opacity 25ms linear 25ms;
+}
+
 .logos, section {
   position: relative;
   z-index: 2;
